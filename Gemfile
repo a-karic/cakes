@@ -13,7 +13,6 @@ gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.5'
 gem 'redis', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
-gem 'sqlite3'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
@@ -24,6 +23,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.6'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -38,6 +38,10 @@ group :test do
   gem 'faker'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'simplecov'
+end
+
+group :production do
+  gem 'pg'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
